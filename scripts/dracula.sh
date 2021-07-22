@@ -47,14 +47,14 @@ main()
   white='#f8f8f2'
   gray='#44475a'
   dark_gray='#282a36'
-  light_purple='#bd93f9'
+  light_purple='#bf9eee'
   dark_purple='#6272a4'
-  cyan='#8be9fd'
-  green='#50fa7b'
-  orange='#ffb86c'
-  red='#ff5555'
-  pink='#ff79c6'
-  yellow='#f1fa8c'
+  cyan='#acebfb'
+  green='#88f298'
+  orange='#f4b26d'
+  red='#ee766d'
+  pink='#f199ce'
+  yellow='#f5f7a8'
 
 
   # Handle left icon configuration
@@ -72,7 +72,7 @@ main()
   # Handle left icon padding
   padding=""
   if [ "$show_left_icon_padding" -gt "0" ]; then
-	  padding="$(printf '%*s' $show_left_icon_padding)"
+      padding="$(printf '%*s' $show_left_icon_padding)"
   fi
   left_icon="$left_icon$padding"
 
@@ -197,7 +197,8 @@ main()
 
   # Non Powerline Configuration
   else
-    tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
+    #tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
+    tmux set-option -g status-left "#[bg=${light_purple},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
 
     tmux set-option -g  status-right ""
 
@@ -245,7 +246,7 @@ main()
 
   fi
 
-  tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${gray}] #I #W${flags}"
+  tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${dark_gray}] #I #W${flags}"
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
 }
