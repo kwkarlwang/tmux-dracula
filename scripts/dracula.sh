@@ -247,8 +247,8 @@ main()
   fi
 
   tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${dark_gray}] #I #W${flags}"
-  tmux set-window-option -g window-status-activity-style "bold"
-  tmux set-window-option -g window-status-bell-style "bold"
+  # tmux set-window-option -g window-status-activity-style "bold"
+  # tmux set-window-option -g window-status-bell-style "bold"
 }
 
 # run main function
